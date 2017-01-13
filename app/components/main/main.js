@@ -14,6 +14,7 @@ import {Text, View } from 'react-native';
 import Toolbar from '../../common/controls/toolbar/toolbar'
 import MainManager from './../../managers/mainManager'
 import style from './main.style'
+import BarGraph from '../../common/controls/barGraph/barGraph';
 
 export default class  extends Component {
 
@@ -32,6 +33,7 @@ export default class  extends Component {
                 <Toolbar name="Main"/>
                 <View style={style.hello}>
                     <Text>Hello world</Text>
+                    <BarGraph bar1={'blue'} bar2={'red'} bar3={'green'} bar4={'black'} mainTitle="미세먼지" subTitle="pm10"/>
                 </View>
             </View>
         )
