@@ -8,7 +8,7 @@
 
 /** External dependencies **/
 import React, { Component } from 'react';
-import {Text, View } from 'react-native';
+import {Text, View, ScrollView } from 'react-native';
 
 /** Internal dependencies **/
 import Toolbar from '../../common/controls/toolbar/toolbar'
@@ -33,16 +33,16 @@ export default class Main extends Component {
         return (
             <View style={style.container}>
                 <Toolbar name="Main"/>
-                <View style={style.hello}>
+                  <ScrollView>
                     <Circle circle1={"blue"} circle2={"skyblue"} circle3={"yellow"} circle4={"red"}/>
-
-                    <StaticBarGraph mainTitle="miss" subTitle="pm10" range1={'0-50'} range2={'-75'} range3={'-100'} range4={'-150'}/>
-                    <StaticBarGraph mainTitle="miss2" subTitle="pm25" range1={'0-25'} range2={'-37.5'} range3={'-50'} range4={'-75'}/>
-
                     <DynamicBarGraph mainTitle="miss2" subTitle="pm25" />
                     <DynamicBarGraph mainTitle="miss" subTitle="pm10" />
-                    <Text>Hello world</Text>
-                </View>
+                    <View style={{backgroundColor:'yellow',marginTop:50,marginBottom:120, height:240}}/>
+                    <StaticBarGraph mainTitle="miss" subTitle="pm10" range1={'0-50'} range2={'-75'} range3={'-100'} range4={'-150'}/>
+                    <StaticBarGraph mainTitle="miss2" subTitle="pm25" range1={'0-25'} range2={'-37.5'} range3={'-50'} range4={'-75'}/>
+                    <View style={{backgroundColor:'powderblue',marginTop:50, height:240}}/>
+                  </ScrollView>
+
             </View>
         )
     }
