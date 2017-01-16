@@ -26,9 +26,6 @@ export default class BarGraph extends Component {
 
     }
 
-    asdasd(){
-
-    }
 
     render() {
         return (
