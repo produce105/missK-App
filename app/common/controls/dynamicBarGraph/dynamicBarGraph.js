@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2016 Produce105 - Miss_k
  *
- * @author yuhogyun
+ * @author hsue
  **/
 
 /** External dependencies **/
