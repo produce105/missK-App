@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2016 Produce105 - Miss_k
  *
- * @author yuhogyun
+ * @author hsue
  **/
 
 /** External dependencies **/
@@ -22,11 +22,10 @@ export default StyleSheet.create({
     container: {
         backgroundColor: '#F5F5F5',
         flex: 1,
-        flexDirection: 'row'
     },
     barMargrin: {
-        marginRight: 5,
-        height: 10,
-        flex: 0.25
+        marginLeft: 3,
+        marginRight: 3,
+        height: 5,
     }
 })

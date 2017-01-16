@@ -22,11 +22,18 @@ export default StyleSheet.create({
     container: {
         backgroundColor: '#F5F5F5',
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginLeft: 20,
+        marginRight: 20,
     },
-    barMargrin: {
-        marginRight: 5,
-        height: 10,
-        flex: 0.25
+    maintitle: {
+      textAlign: 'right',
+      fontSize: 18,
+      fontWeight: 'bold'
+    },
+    subtitle: {
+      textAlign: 'right',
+      fontSize: 10,
+      color: 'grey'
     }
 })
