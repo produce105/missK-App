@@ -42,15 +42,10 @@ export default class Main extends Component {
                   <View style={style.underpage}>
                     <StaticBarGraph mainTitle="miss" subTitle="pm10" range1={'0-50'} range2={'-75'} range3={'-100'} range4={'-150'}/>
                     <StaticBarGraph mainTitle="miss2" subTitle="pm25" range1={'0-25'} range2={'-37.5'} range3={'-50'} range4={'-75'}/>
-<<<<<<< HEAD
-                    <View style={{backgroundColor:'powderblue',marginTop:50, height:240}}/>
-                  </ScrollView>
-=======
                   </View>
                 </ScrollView>
                 <View style={style.infopage}/>
               </ScrollView>
->>>>>>> workon
             </View>
         )
     }
