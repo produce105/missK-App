@@ -18,16 +18,26 @@ const {width, height, scale} = Dimensions.get('window'),
     vmin = Math.min(vw, vh),
     vmax = Math.max(vw, vh);
 
+
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
         backgroundColor: '#F5F5F5',
         flex: 1
     },
-    hello: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex: 1,
+    frontpage: {
+        width: width,
+        height: height,
+        backgroundColor: '#FF5555',
+    },
+    underpage: {
+        width: width,
+        height: height,
+        backgroundColor: '#55FF55',
+    },
+    infopage: {
+        width: width,
+        height: height,
+        backgroundColor: '#5555FF',
     }
 });
-
