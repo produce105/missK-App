@@ -69,6 +69,7 @@ export default StyleSheet.create({
     },
     textsection: {
         flex:0.07,
+        marginTop: 30,
         alignItems: 'center',
         justifyContent:'center',
     },
