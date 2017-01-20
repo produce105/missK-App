@@ -27,7 +27,7 @@ export default StyleSheet.create({
         alignItems: 'stretch',
     },
     titlestyle: {
-        flex: 1,
+        flex: 0.5,
         width: wid,
         height: 18,
         flexDirection: 'row',
@@ -36,7 +36,7 @@ export default StyleSheet.create({
         marginRight: 20,
     },
     barstyle: {
-        flex: 1,
+        flex: 0.5,
         flexDirection: 'row',
         alignItems: 'stretch',
         marginLeft: 20,
