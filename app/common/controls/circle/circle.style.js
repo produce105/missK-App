@@ -25,8 +25,7 @@ export default StyleSheet.create({
         backgroundColor: '#F5F5F5',
         flex: 1,
         flexDirection: 'row',
-        marginTop: 50,
-        marginBottom: 50,
+        alignItems:'center',
         marginLeft: 50,
         marginRight:50
     },
@@ -35,8 +34,8 @@ export default StyleSheet.create({
       alignItems:'center'
     },
     circle: {
-        width:20,
-        height: 20,
-        borderRadius:20/2
+        width:25,
+        height: 25,
+        borderRadius:25/2
     }
 })
