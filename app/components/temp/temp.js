@@ -73,7 +73,7 @@ export default class Temp extends Component {
         return (
             <View style={style.container}>
                 <AnimatedGraph barWidth={this.state.barWidth}/>
-                <AnimatedNumber number={width / 2} animProgress={this.state.numberProgress}/>
+                <AnimatedNumber number={ width / 2} animProgress={this.state.numberProgress}/>
                 <TouchableOpacity onPress={() => this._restartAnimation()}>
                     <Text>Restart Animation</Text>
                 </TouchableOpacity>
@@ -86,6 +86,7 @@ export default class Temp extends Component {
     _restartAnimation() {
         this.state.barWidth.setValue(0);
         this.state.numberProgress.setValue(0);
+        this.state.circleRadius.setValue(0);
         this.animation.start();
     }
 }
