@@ -2,14 +2,14 @@
  * Copyright (c) 2016 Produce105 - miss_k
  *
  *
- * @author hogyun
+ * @author hsue
  */
 
 /** External dependencies **/
 import React, {StyleSheet, Dimensions, PixelRatio} from 'react-native';
 
 /** Internal dependencies **/
-import {Colors} from './../../common/styles/common'
+import {Colors} from './../../../common/styles/common'
 
 /** Constant **/
 const {width, height, scale} = Dimensions.get('window'),
@@ -26,24 +26,15 @@ export default StyleSheet.create({
         flex: 1
     },
 
-    frontpage: {
-        width: width,
-        height: height,
-  //      backgroundColor: '#FF5555',
+
+    locinfobar:{
+      margin: 20,
+    },
+    actionspace: {
+        height: height/3,
+        backgroundColor: '#FFFF55',
+        alignItems: 'center',
+        justifyContent:'center',
     },
 
-    underpage: {
-        flex:1,
-        width: width,
-        height: height,
-      //  backgroundColor: '#55FF55',
-    },
-
-    infopage: {
-        flex:1,
-        width: width,
-        height: height,
-    //    backgroundColor: '#5555FF',
-    },
-  
 });

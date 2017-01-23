@@ -14,7 +14,6 @@ import {Scene, Router, Schema, Actions, ActionConst, Animations, TabBar} from "r
 
 /** Internal dependencies **/
 import Main from './components/main/main';
-import Temp from './components/temp/temp';
 
 export default class MisskAppRouter extends Component {
     constructor(props) {
@@ -26,7 +25,6 @@ export default class MisskAppRouter extends Component {
             <Router hideNavBar={true}>
                 <Scene key="scene">
                     <Scene key="main" component={Main} title="Main"/>
-                    <Scene key="temp" component={Temp} title="Temp" initial={true}/>
                 </Scene>
             </Router>
         );
