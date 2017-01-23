@@ -9,7 +9,7 @@
 import React, {StyleSheet, Dimensions, PixelRatio} from 'react-native';
 
 /** Internal dependencies **/
-import {Colors} from './../../../common/styles/common'
+import {Colors} from './../../common/styles/common'
 
 /** Constant **/
 const {width, height, scale} = Dimensions.get('window'),
@@ -26,21 +26,8 @@ export default StyleSheet.create({
         flex: 1
     },
 
-    textsection: {
-        flex:0.07,
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent:'center',
-    },
-    barsection:{
-      flex:0.23,
-      margin:20
-    },
-    detailsection:{
-      flex:0.7,
-      alignItems: 'center',
-      justifyContent:'center',
-      backgroundColor: '#AAAAAA',
-    },
 
+    locinfobar:{
+      margin: 20,
+    },
 });
