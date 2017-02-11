@@ -29,9 +29,6 @@ export default class BelowPage extends Component {
     render() {
         return (
             <View style={style.container}>
-              <View style={style.locinfobar}>
-                <LocationBar />
-              </View>
               <View style={style.threedays}>
                   <Text  style={{fontSize:20, fontWeight:'bold'}}>expectation</Text>
               </View>

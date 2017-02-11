@@ -26,18 +26,14 @@ export default StyleSheet.create({
         flex: 1
     },
 
-
-    locinfobar:{
-      flex:0.15
-    },
     threedays: {
-        flex:0.45,
+        flex:0.5,
         alignItems: 'center',
         justifyContent:'center',
         backgroundColor: '#888888',
     },
     alram: {
-        flex:0.4,
+        flex:0.5,
         alignItems: 'center',
         justifyContent:'center',
         backgroundColor: '#F4FFF4',

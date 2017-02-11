@@ -18,6 +18,7 @@ import style from './main.style'
 import MainPage from './mainPage/mainPage';
 import BelowPage from './belowPage/belowPage';
 import DetailPage from './detailPage/detailPage';
+import LocationBar from './locationBar';
 
 export default class Main extends Component {
 
@@ -33,6 +34,9 @@ export default class Main extends Component {
     render() {
         return (
             <View style={style.container}>
+                <View style={style.locationBar}>
+                  <LocationBar />
+                </View>
               <ScrollView horizontal={true} pagingEnabled={true}>
                 <ScrollView pagingEnabled={true}>
                   <View style={style.frontpage}>

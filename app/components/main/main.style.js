@@ -26,6 +26,10 @@ export default StyleSheet.create({
         flex: 1
     },
 
+    locationBar:{
+        flex:0.15
+    },
+
     frontpage: {
         width: width,
         height: height,
@@ -45,5 +49,5 @@ export default StyleSheet.create({
         height: height,
     //    backgroundColor: '#5555FF',
     },
-  
+
 });

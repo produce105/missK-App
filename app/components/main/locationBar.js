@@ -15,22 +15,34 @@ export default class LocationBar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+          curTime :  new Date().toLocaleString()
+        }
     }
+
     componentWillMount() {
 
     }
-    componentDidMount() {
 
+    componentDidMount() {
+        setInterval( () => {
+          this.setState({
+            curTime : new Date().toLocaleString()
+          })
+          console.log(this.state.curTime);
+        },1000)
     }
 
 
     render() {
+      //  let month = (this.state.curTime).getMonth();
         return (
             <View style={style.container}>
               <View style={style.locinfobar}>
-                <Text style={{fontSize:15}}>January 19th 3:32pm</Text>
+                <Text style={{fontSize:15}}>{this.state.curTime}</Text>
                 <Text  style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
+
+
               </View>
             </View>
         )

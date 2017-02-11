@@ -12,7 +12,7 @@ import {Text, View } from 'react-native';
 import style from './mainPage.style';
 import DynamicBarGraph from '../../../common/controls/dynamicBarGraph/dynamicBarGraph';
 import Circle from '../../../common/controls/circle/circle';
-import LocationBar from '../locationBar';
+
 
 export default class MainPage extends Component {
 
@@ -31,7 +31,6 @@ export default class MainPage extends Component {
     render() {
         return (
             <View style={style.container}>
-              <LocationBar />
               <Circle circle1={"blue"} circle2={"skyblue"} circle3={"yellow"} circle4={"red"}/>
               <DynamicBarGraph mainTitle="micro2" subTitle="pm25" />
               <DynamicBarGraph mainTitle="micro" subTitle="pm10" />
