@@ -13,7 +13,12 @@ export const vh = height / 100
 
 
 export const Colors = {
-
+    mainBlack: 'rgb(3, 3, 3)',
+    mainBlue: 'rgb(0, 68, 155)',
+    mainSky: 'rgb(173, 222, 227)',
+    mainYellow: 'rgb(255, 201, 0)',
+    mainRed: 'rgb(230, 68, 43)',
+    mainGray: 'rgb(170, 170, 170)'
 }
 
 export const FontWeights = {

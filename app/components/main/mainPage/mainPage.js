@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 import {Text, View } from 'react-native';
 
 /** Internal dependencies **/
+import {Colors} from './../../../common/styles/common';
 import style from './mainPage.style';
 import DynamicBarGraph from '../../../common/controls/dynamicBarGraph/dynamicBarGraph';
 import Circle from '../../../common/controls/circle/circle';
@@ -38,7 +39,7 @@ export default class MainPage extends Component {
     render() {
         return (
             <View style={style.container}>
-              <Circle circle1={"blue"} circle2={"skyblue"} circle3={"yellow"} circle4={"red"}/>
+              <Circle circle1={Colors.mainBlue} circle2={Colors.mainSky} circle3={Colors.mainYellow} circle4={Colors.mainRed}/>
               <DynamicBarGraph mainTitle="micro2" subTitle="pm25" />
               <DynamicBarGraph mainTitle="micro" subTitle="pm10" />
               <View style={style.actionspace}>

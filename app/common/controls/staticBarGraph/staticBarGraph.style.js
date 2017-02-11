@@ -29,7 +29,7 @@ export default StyleSheet.create({
     },
     maintitle: {
       textAlign: 'right',
-      fontSize: 18,
+      fontSize: 12,
       fontWeight: 'bold'
     },
     subtitle: {

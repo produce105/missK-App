@@ -9,7 +9,7 @@
 import React, {StyleSheet, Dimensions, PixelRatio} from 'react-native';
 
 /** Internal dependencies **/
-import {Colors} from './../../../common/styles/common'
+import {Colors, FontWeights} from './../../../common/styles/common'
 
 /** Constant **/
 const {width, height, scale} = Dimensions.get('window'),
@@ -26,22 +26,45 @@ export default StyleSheet.create({
         backgroundColor: '#F5F5F5',
         flex: 1
     },
-
     textsection: {
+        flexDirection: 'row',
         flex:0.07,
         marginTop: 30,
         alignItems: 'center',
         justifyContent:'center',
+        marginRight: 20,
+        marginLeft: 20,
+    },
+    unitSection: {
+        marginRight: 20,
+    },
+    unitText: {
+        textAlign: 'right'
     },
     barsection:{
       flex:0.23,
       margin:20
     },
-    detailsection:{
+    descriptionSection:{
       flex:0.7,
-      alignItems: 'center',
-      justifyContent:'center',
-      backgroundColor: '#AAAAAA',
+      backgroundColor: Colors.mainGray,
+      flexDirection: 'column'
     },
+    rowSection: {
+        flexDirection: 'row',
+        marginTop: 30,
+    },
+    titleSection: {
+        flex: 0.3,
+        marginRight: 20,
+    },
+    detailSection: {
+        flex: 0.7,
+        marginRight: 20
+    },
+    descriptionTitle: {
+        textAlign: 'right',
+        fontWeight: FontWeights.bold
+    }
 
 });
