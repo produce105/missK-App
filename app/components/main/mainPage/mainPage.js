@@ -12,19 +12,26 @@ import {Text, View } from 'react-native';
 import style from './mainPage.style';
 import DynamicBarGraph from '../../../common/controls/dynamicBarGraph/dynamicBarGraph';
 import Circle from '../../../common/controls/circle/circle';
-
+import MainManager from './../../../managers/mainManager';
 
 export default class MainPage extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+
+        }
     }
     componentWillMount() {
-
+        this._fetchDustData();
     }
     componentDidMount() {
 
+    }
+
+    async _fetchDustData() {
+        this.dust = await MainManager.getDustData();
+        console.log(this.dust);
     }
 
 
