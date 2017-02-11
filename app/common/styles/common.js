@@ -18,7 +18,8 @@ export const Colors = {
     mainSky: 'rgb(173, 222, 227)',
     mainYellow: 'rgb(255, 201, 0)',
     mainRed: 'rgb(230, 68, 43)',
-    mainGray: 'rgb(170, 170, 170)'
+    mainGray: 'rgb(170, 170, 170)',
+    mainWhite: 'rgb(255, 255, 255)'
 }
 
 export const FontWeights = {

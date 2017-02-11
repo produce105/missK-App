@@ -19,35 +19,30 @@ const {width, height, scale} = Dimensions.get('window'),
     vmax = Math.max(vw, vh);
 
 
+const topBarHeight = 100;
+
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
         backgroundColor: '#F5F5F5',
-        flex: 1
+        // flex: 1
     },
 
     locationBar:{
-        flex:0.15
+        height: topBarHeight,
+
     },
 
     frontpage: {
-        width: width,
-        height: height,
-  //      backgroundColor: '#FF5555',
+        height: height - topBarHeight,
     },
 
     underpage: {
-        flex:1,
-        width: width,
-        height: height,
-      //  backgroundColor: '#55FF55',
+        height: height - topBarHeight,
     },
 
     infopage: {
-        flex:1,
-        width: width,
-        height: height,
-    //    backgroundColor: '#5555FF',
+
     },
 
 });
