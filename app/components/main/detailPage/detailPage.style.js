@@ -16,6 +16,7 @@ const {width, height, scale} = Dimensions.get('window'),
     vw = width / 100,
     vh = height / 100,
     vmin = Math.min(vw, vh),
+    vres = Math.
     vmax = Math.max(vw, vh);
 
 

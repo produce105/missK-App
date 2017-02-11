@@ -6,8 +6,8 @@
  * @author hogyun
  */
 
-const AppConfig = {
-
+const CONFIG = {
+    API_SERVER_BASE_URL: 'http://localhost:3000/'
 };
 
-export default AppConfig;
+export default CONFIG;
