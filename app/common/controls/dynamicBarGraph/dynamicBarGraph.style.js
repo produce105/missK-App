@@ -45,7 +45,7 @@ export default StyleSheet.create({
     maintitle: {
       textAlignVertical: 'bottom',
       textAlign: 'left',
-      fontSize: 18,
+      fontSize: 10,
       fontWeight: 'bold',
       marginRight: 3
     },
