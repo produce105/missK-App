@@ -24,10 +24,10 @@ export default class MainPage extends Component {
         }
     }
     componentWillMount() {
-        this._fetchDustData();
     }
     componentDidMount() {
 
+          // this._fetchDustData();
     }
 
     async _fetchDustData() {

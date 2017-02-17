@@ -16,7 +16,8 @@ export default class LocationBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          curTime :  new Date().toLocaleString()
+          curTime :  new Date().toLocaleString(),
+          curDate : new Date()
         }
     }
 
@@ -30,16 +31,18 @@ export default class LocationBar extends Component {
             curTime : new Date().toLocaleString()
           })
         },1000)
+
+
     }
 
 
     render() {
-  //    let month = (this.state.curTime).getMonth()+1;
-  //    let date = (this.state.curTime).getDate();
+      let month = this.state.curDate.getMonth()+1;
         return (
             <View style={style.container}>
               <View style={style.locinfobar}>
                 <Text style={{fontSize:15}}>{this.state.curTime}</Text>
+                <Text style={{fontSize:15}}>{month}</Text>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
 
 
