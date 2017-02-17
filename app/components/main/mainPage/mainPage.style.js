@@ -31,10 +31,8 @@ export default StyleSheet.create({
       margin: 20,
     },
     actionspace: {
-        height: height/3,
-        backgroundColor: '#FFFF55',
-        alignItems: 'center',
-        justifyContent:'center',
+        height: height * 2 / 5,
+        backgroundColor: Colors.mainYellow,
     },
 
 });

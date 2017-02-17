@@ -7,7 +7,9 @@
  */
 
 const CONFIG = {
-    API_SERVER_BASE_URL: 'http://localhost:3000/'
+    API_SERVER_BASE_URL: 'http://10.0.2.2:3000/'
 };
+//Android: 'http://10.0.2.2:3000/'
+//IOS: 'http://localhost:3000/'
 
 export default CONFIG;

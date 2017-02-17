@@ -14,6 +14,7 @@ import style from './mainPage.style';
 import DynamicBarGraph from '../../../common/controls/dynamicBarGraph/dynamicBarGraph';
 import Circle from '../../../common/controls/circle/circle';
 import MainManager from './../../../managers/mainManager';
+import ActionPage from './actionPage';
 
 export default class MainPage extends Component {
 
@@ -40,10 +41,11 @@ export default class MainPage extends Component {
         return (
             <View style={style.container}>
               <Circle circle1={Colors.mainBlue} circle2={Colors.mainSky} circle3={Colors.mainYellow} circle4={Colors.mainRed}/>
-              <DynamicBarGraph mainTitle="micro2" subTitle="pm25" />
-              <DynamicBarGraph mainTitle="micro" subTitle="pm10" />
+              <DynamicBarGraph mainTitle="미세먼지" subTitle="pm25" unit={true}/>
+              <DynamicBarGraph mainTitle="초 미세먼지" subTitle="pm10" />
               <View style={style.actionspace}>
-                <Text  style={{fontSize:20, fontWeight:'bold'}}>Action Comment Space</Text>
+                  <ActionPage type={"water"}/>
+                  <ActionPage type={"fruit"}/>
               </View>
             </View>
         )

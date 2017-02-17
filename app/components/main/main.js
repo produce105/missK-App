@@ -35,21 +35,15 @@ export default class Main extends Component {
         return (
             <View style={style.container}>
                 <View style={style.locationBar}>
-                  <LocationBar />
+                    <LocationBar />
                 </View>
-              <ScrollView horizontal={true} pagingEnabled={true}>
-                <ScrollView pagingEnabled={true}>
+              <ScrollView pagingEnabled={true}>
                   <View style={style.frontpage}>
-                    <MainPage />
+                      <MainPage />
                   </View>
                   <View style={style.underpage}>
-                    <BelowPage />
+                      <BelowPage />
                   </View>
-                </ScrollView>
-
-                <View style={style.infopage}>
-                  <DetailPage />
-                </View>
               </ScrollView>
             </View>
         )

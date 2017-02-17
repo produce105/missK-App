@@ -29,12 +29,25 @@ export default class DynamicBarGraph extends Component {
     }
 
 
+    _renderUnit() {
+        if(this.props.unit){
+            return (
+                <View style={style.unitContainer}>
+                    <Text style={style.unitText}>㎍/㎥</Text>
+                </View>
+            )
+        }
+    }
+
     render() {
         return (
             <View style={style.container}>
               <View style={style.titlestyle}>
                 <Text style={style.maintitle}>{this.props.mainTitle}</Text>
                 <Text style={style.subtitle}>{this.props.subTitle}</Text>
+                  {
+                      this._renderUnit()
+                  }
               </View>
               <View style={style.barstyle}>
                   <Bar barcolor={Colors.mainBlue} />
