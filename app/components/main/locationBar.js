@@ -6,7 +6,7 @@
 
 /** External dependencies **/
 import React, { Component } from 'react';
-import {Text, View } from 'react-native';
+import {Text, View, Image } from 'react-native';
 
 /** Internal dependencies **/
 import style from './locationBar.style';
@@ -38,12 +38,13 @@ export default class LocationBar extends Component {
   //    let date = (this.state.curTime).getDate();
         return (
             <View style={style.container}>
-              <View style={style.locinfobar}>
-                <Text style={{fontSize:15}}>{this.state.curTime}</Text>
-                <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
-
-
-              </View>
+                <View style={style.locationBar}>
+                    <Text style={{fontSize:15}}>{this.state.curTime}</Text>
+                    <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
+                </View>
+                <View style={style.weather}>
+                    <Image style={style.weatherIcon}source={require('./../../assets/images/icons/icon_action_fruits.png')}/>
+                </View>
             </View>
         )
     }

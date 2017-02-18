@@ -37,12 +37,12 @@ export default class Main extends Component {
                 <View style={style.locationBar}>
                     <LocationBar />
                 </View>
-              <ScrollView pagingEnabled={true}>
+              <ScrollView pagingEnabled={true} showsVerticalScrollIndicator={false}>
                   <View style={style.frontpage}>
                       <MainPage />
                   </View>
                   <View style={style.underpage}>
-                      <BelowPage />
+                      <DetailPage />
                   </View>
               </ScrollView>
             </View>

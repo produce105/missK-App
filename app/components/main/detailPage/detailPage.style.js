@@ -28,12 +28,9 @@ export default StyleSheet.create({
     },
     textsection: {
         flexDirection: 'row',
-        flex:0.07,
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent:'center',
-        marginRight: 20,
-        marginLeft: 20,
+    },
+    iconSection: {
+        flex: 0.23
     },
     unitSection: {
         marginRight: 20,
@@ -42,29 +39,22 @@ export default StyleSheet.create({
         textAlign: 'right'
     },
     barsection:{
-      flex:0.23,
-      margin:20
+      // flex:0.23,
+      // margin:20
+    },
+    predictionSection: {
+        flexDirection: 'row',
+    },
+    border: {
+        borderRightColor: Colors.mainGray,
+        borderRightWidth: 3,
     },
     descriptionSection:{
       flex:0.7,
       backgroundColor: Colors.mainGray,
       flexDirection: 'column'
     },
-    rowSection: {
-        flexDirection: 'row',
-        marginTop: 30,
-    },
-    titleSection: {
-        flex: 0.3,
-        marginRight: 20,
-    },
-    detailSection: {
-        flex: 0.7,
-        marginRight: 20
-    },
-    descriptionTitle: {
-        textAlign: 'right',
-        fontWeight: FontWeights.bold
+    belowSection: {
+        flexDirection: 'row'
     }
-
 });
