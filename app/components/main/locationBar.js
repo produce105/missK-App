@@ -6,7 +6,7 @@
 
 /** External dependencies **/
 import React, { Component } from 'react';
-import {Text, View, Navigator} from 'react-native';
+import {Text, View, Navigator, Image} from 'react-native';
 
 /** Internal dependencies **/
 import style from './locationBar.style';
@@ -42,7 +42,9 @@ export default class LocationBar extends Component {
               <View style={style.locinfobar}>
                 <Text style={{fontSize:15}}>{month}월 {date}일 {this.state.curTime}</Text>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
-
+                <View style={style.weather}>
+                    <Image style={style.weatherIcon}source={require('./../../assets/images/icons/icon_action_fruits.png')}/>
+                </View>
               </View>
             </View>
         )

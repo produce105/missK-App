@@ -27,5 +27,8 @@ export default StyleSheet.create({
         marginLeft: 3,
         marginRight: 3,
         height: 5,
+    },
+    grayBack: {
+        backgroundColor: Colors.mainGray
     }
 })

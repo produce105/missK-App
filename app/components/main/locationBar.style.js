@@ -23,11 +23,14 @@ const {width, height, scale} = Dimensions.get('window'),
 export default StyleSheet.create({
     container: {
         backgroundColor: '#F5F5F5',
-        flex: 1
+        flexDirection: 'row'
     },
 
-
-    locinfobar:{
-      margin: 20,
+    locationBar:{
+        flex: 1,
+        margin: 20,
+    },
+    weather: {
+        margin: 20,
     },
 });

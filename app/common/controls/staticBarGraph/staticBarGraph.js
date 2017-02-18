@@ -34,10 +34,10 @@ export default class StaticBarGraph extends Component {
                     <Text style={style.maintitle}>{this.props.mainTitle}</Text>
                     <Text style={style.subtitle}>{this.props.subTitle}</Text>
                 </View>
-                <Bar barcolor={Colors.mainBlue} stat={'좋음'} range={this.props.range1}/>
-                <Bar barcolor={Colors.mainSky} stat={'보통'} range={this.props.range2}/>
-                <Bar barcolor={Colors.mainYellow} stat={'나쁨'} range={this.props.range3}/>
-                <Bar barcolor={Colors.mainRed} stat={'매우나쁨'} range={this.props.range4}/>
+                <Bar background={Colors.mainGray} barcolor={Colors.mainBlue} stat={'좋음'} range={this.props.range1}/>
+                <Bar background={Colors.mainGray} barcolor={Colors.mainSky} stat={'보통'} range={this.props.range2}/>
+                <Bar background={Colors.mainGray} barcolor={Colors.mainYellow} stat={'나쁨'} range={this.props.range3}/>
+                <Bar background={Colors.mainGray} barcolor={Colors.mainRed} stat={'매우나쁨'} range={this.props.range4}/>
             </View>
         )
     }

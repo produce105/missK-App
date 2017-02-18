@@ -20,7 +20,7 @@ const {width, height, scale} = Dimensions.get('window'),
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#F5F5F5',
+        backgroundColor: Colors.mainGray,
         flex: 1,
         flexDirection: 'row',
         alignItems:'center',
