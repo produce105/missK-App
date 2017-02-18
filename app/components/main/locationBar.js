@@ -6,7 +6,7 @@
 
 /** External dependencies **/
 import React, { Component } from 'react';
-import {Text, View, Image } from 'react-native';
+import {Text, View, Navigator, Image} from 'react-native';
 
 /** Internal dependencies **/
 import style from './locationBar.style';
@@ -16,7 +16,8 @@ export default class LocationBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          curTime :  new Date().toLocaleString()
+          curTime :  null,
+          curDate : new Date()
         }
     }
 
@@ -27,24 +28,24 @@ export default class LocationBar extends Component {
     componentDidMount() {
         setInterval( () => {
           this.setState({
-            curTime : new Date().toLocaleString()
+            curTime : new Date().toLocaleTimeString('en-US'),
           })
         },1000)
+
+
     }
-
-
     render() {
-  //    let month = (this.state.curTime).getMonth()+1;
-  //    let date = (this.state.curTime).getDate();
+      let month = this.state.curDate.getMonth()+1;
+      let date = this.state.curDate.getDate();
         return (
             <View style={style.container}>
-                <View style={style.locationBar}>
-                    <Text style={{fontSize:15}}>{this.state.curTime}</Text>
-                    <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
-                </View>
+              <View style={style.locinfobar}>
+                <Text style={{fontSize:15}}>{month}월 {date}일 {this.state.curTime}</Text>
+                <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
                 <View style={style.weather}>
                     <Image style={style.weatherIcon}source={require('./../../assets/images/icons/icon_action_fruits.png')}/>
                 </View>
+              </View>
             </View>
         )
     }
