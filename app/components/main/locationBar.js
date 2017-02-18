@@ -6,7 +6,7 @@
 
 /** External dependencies **/
 import React, { Component } from 'react';
-import {Text, View } from 'react-native';
+import {Text, View, Navigator} from 'react-native';
 
 /** Internal dependencies **/
 import style from './locationBar.style';
@@ -34,8 +34,6 @@ export default class LocationBar extends Component {
 
 
     }
-
-
     render() {
       let month = this.state.curDate.getMonth()+1;
       let date = this.state.curDate.getDate();
@@ -44,7 +42,6 @@ export default class LocationBar extends Component {
               <View style={style.locinfobar}>
                 <Text style={{fontSize:15}}>{month}월 {date}일 {this.state.curTime}</Text>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Seoul Gangnam</Text>
-
 
               </View>
             </View>
