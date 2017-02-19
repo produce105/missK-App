@@ -24,7 +24,7 @@ const topBarHeight = 100;
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#F5F5F5',
+        backgroundColor: 'white',
         // flex: 1
     },
 

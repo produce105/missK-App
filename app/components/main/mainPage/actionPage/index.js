@@ -67,11 +67,11 @@ export default class ActionPage extends Component {
         switch(this.props.type) {
             case 'fruit':
                 description1 = '꼼꼼히 먼지를 닦아서 먹어요';
-                description2 = '배출을 원활하게 도와줘!';
+                description2 = '';
                 break;
             case 'water':
                 description1 = '물을 마셔 몸 속 노폐물';
-                description2 = '충분한 수분섭취';
+                description2 = '배출을 원활하게 도와줘!';
                 break;
         }
 

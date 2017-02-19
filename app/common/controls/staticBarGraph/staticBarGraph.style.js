@@ -8,7 +8,7 @@
 import React, {StyleSheet, Dimensions, PixelRatio} from 'react-native';
 
 /** Internal dependencies **/
-import {Colors} from './../../../common/styles/common';
+import {Colors, FontWeights} from './../../../common/styles/common';
 
 /** Constant **/
 const {width, height, scale} = Dimensions.get('window'),
@@ -20,7 +20,7 @@ const {width, height, scale} = Dimensions.get('window'),
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: Colors.mainGray,
+        backgroundColor: Colors.backGray,
         flex: 1,
         flexDirection: 'row',
         alignItems:'center',
@@ -28,12 +28,10 @@ export default StyleSheet.create({
         marginRight: 20,
     },
     maintitle: {
-      textAlign: 'right',
       fontSize: 12,
-      fontWeight: 'bold'
+      fontWeight: FontWeights.regular
     },
     subtitle: {
-      textAlign: 'right',
       fontSize: 10,
       color: 'grey'
     }

@@ -19,7 +19,8 @@ export const Colors = {
     mainYellow: 'rgb(255, 201, 0)',
     mainRed: 'rgb(230, 68, 43)',
     mainGray: 'rgb(170, 170, 170)',
-    mainWhite: 'rgb(255, 255, 255)'
+    mainWhite: 'rgb(255, 255, 255)',
+    backGray: 'rgb(246, 246, 246)'
 }
 
 export const FontWeights = {

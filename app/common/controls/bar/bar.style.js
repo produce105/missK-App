@@ -20,7 +20,7 @@ const {width, height, scale} = Dimensions.get('window'),
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#F5F5F5',
+        backgroundColor: 'white',
         flex: 1,
     },
     barMargrin: {
@@ -29,6 +29,6 @@ export default StyleSheet.create({
         height: 5,
     },
     grayBack: {
-        backgroundColor: Colors.mainGray
+        backgroundColor: Colors.backGray
     }
 })

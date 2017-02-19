@@ -1,7 +1,7 @@
 /**
- * Copyright (c) 2016 Team Mondrian - Inbody
+ * Copyright (c) 2016 Produce105 - Miss_k
  *
- * @author yuhogyun
+ * @author hsue
  **/
 
 /** External dependencies **/
@@ -10,6 +10,7 @@ import React, {StyleSheet, Dimensions, PixelRatio} from 'react-native';
 /** Internal dependencies **/
 import {Colors} from './../../../common/styles/common';
 
+
 /** Constant **/
 const {width, height, scale} = Dimensions.get('window'),
     vw = width / 100,
@@ -17,10 +18,12 @@ const {width, height, scale} = Dimensions.get('window'),
     vmin = Math.min(vw, vh),
     vmax = Math.max(vw, vh);
 
+
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        // backgroundColor: '#F5F5F5',
+        flexDirection: 'row',
+        marginRight: 20,
+        marginLeft: 20,
     },
-});
-
+})

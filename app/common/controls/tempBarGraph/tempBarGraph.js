@@ -36,7 +36,7 @@ export default class TempBarGraph extends Component {
         // ...Component.defaultProps,
         animProgress: 1,
         barWidth: width / 2,
-    }
+    };
 
     constructor(props) {
         super(props);

@@ -23,7 +23,7 @@ const {width, height, scale} = Dimensions.get('window'),
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#F5F5F5',
+        backgroundColor: 'white',
         flex: 1
     },
     textsection: {
@@ -32,8 +32,10 @@ export default StyleSheet.create({
     iconSection: {
         flex: 0.23
     },
-    unitSection: {
+    unitContainer: {
+        flex: 0.5,
         marginRight: 20,
+        justifyContent: 'center'
     },
     unitText: {
         textAlign: 'right'
@@ -42,19 +44,68 @@ export default StyleSheet.create({
       // flex:0.23,
       // margin:20
     },
+    predictionTitle: {
+        color: Colors.mainBlack,
+        fontSize: 20,
+        fontWeight: FontWeights.bold,
+        marginLeft: 20,
+    },
+    weatherIcon: {
+        marginTop: 20,
+        marginBottom: 20,
+    },
     predictionSection: {
+        marginTop: 20,
         flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    predictionContainer: {
+        marginRight: 30,
+        marginLeft: 30,
     },
     border: {
         borderRightColor: Colors.mainGray,
         borderRightWidth: 3,
     },
+    divider: {
+        width: 1,
+        backgroundColor: Colors.mainGray,
+        marginTop: 30,
+        marginBottom: 30,
+        // flex: 0.5
+    },
+    row: {
+        borderTopWidth: 0.4,
+        backgroundColor: Colors.backGray,
+    },
     descriptionSection:{
-      flex:0.7,
-      backgroundColor: Colors.mainGray,
+      flex:0.4,
+      backgroundColor: Colors.backGray,
       flexDirection: 'column'
     },
+    descriptionTitle: {
+        flex: 0.2,
+    },
+    description: {
+        flex: 0.8,
+        marginRight: 20,
+    },
+    descriptionText: {
+        flex: 0.5,
+        fontSize: 11.5
+    },
+    upperSection: {
+        flex: 0.5,
+        marginTop: 20,
+    },
+    standardContainer: {
+        flex: 0.5,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
     belowSection: {
-        flexDirection: 'row'
+        flex: 0.5,
+        flexDirection: 'row',
+        // marginTop: 20
     }
 });
