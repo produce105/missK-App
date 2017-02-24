@@ -30,7 +30,7 @@ export default class Bar extends Component {
             <View style={[style.container, (this.props.background)? style.grayBack : null]}>
                 <Text style={{color: this.props.barcolor , textAlign:'center'}}>{this.props.stat}</Text>
                 <View style={[{backgroundColor: this.props.barcolor}, style.barMargrin]}/>
-                <Text style={{textAlign:'center', marginTop: 5}}>{this.props.range}</Text>
+                <Text style={{textAlign:'center', marginTop: 5, fontSize: 10}}>{this.props.range}</Text>
             </View>
         )
     }

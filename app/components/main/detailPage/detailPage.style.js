@@ -38,7 +38,8 @@ export default StyleSheet.create({
         justifyContent: 'center'
     },
     unitText: {
-        textAlign: 'right'
+        textAlign: 'right',
+        fontSize: 10
     },
     barsection:{
       // flex:0.23,
@@ -46,8 +47,7 @@ export default StyleSheet.create({
     },
     predictionTitle: {
         color: Colors.mainBlack,
-        fontSize: 20,
-        fontWeight: FontWeights.bold,
+        fontSize: 16,
         marginLeft: 20,
     },
     weatherIcon: {

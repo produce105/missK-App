@@ -25,8 +25,6 @@ export default StyleSheet.create({
         backgroundColor: 'white',
         flex: 1
     },
-
-
     locinfobar:{
       margin: 20,
     },

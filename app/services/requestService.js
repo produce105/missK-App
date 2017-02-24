@@ -13,7 +13,8 @@ export default class RequestService {
         try {
             let Options = {
                 method: 'GET',
-                headers: new Headers()
+                headers: new Headers(),
+                qs: qs
             };
 
             let response = await fetch(url, Options);

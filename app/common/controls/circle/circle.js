@@ -41,9 +41,6 @@ export default class NormalCircle extends Component {
 
     }
     componentDidMount() {
-        console.log("==========");
-        console.log(this.props);
-        console.log("==========");
 
     }
     // this.radius * this.props.animProgress

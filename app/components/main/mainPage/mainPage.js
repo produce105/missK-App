@@ -44,8 +44,8 @@ export default class MainPage extends Component {
                        circle4={Colors.mainRed} animProgress={this.props.animProgress}
                        radius1={this.props.radius1} radius2={this.props.radius2} radius3={this.props.radius3} radius4={this.props.radius4}
               />
-              <DynamicBarGraph mainTitle="미세먼지" subTitle="pm25" unit={true}/>
-              <DynamicBarGraph mainTitle="초 미세먼지" subTitle="pm10" />
+              <DynamicBarGraph mainTitle="미세먼지" subTitle="pm10" unit={true} style={{marginTop: 20}}/>
+              <DynamicBarGraph mainTitle="초 미세먼지" subTitle="pm2.5" style={{marginBottom: 20}}/>
               <View style={style.actionspace}>
                   <ActionPage type={"water"}/>
                   <ActionPage type={"fruit"}/>

@@ -50,10 +50,10 @@ export default class Main extends Component {
             this.setState({refreshing: false}, ()=>{this._startAnimation()});
         }, 1000);
         /*
-        fetchData().then(() => {
+         fetchData().then(() => {
 
-        });
-        */
+         });
+         */
     }
 
     componentWillMount() {
@@ -108,11 +108,11 @@ export default class Main extends Component {
         /*{...this._panResponder.panHandlers}>*/
         /*<Text style={{textAlign: 'center', marginTop: 20}}>{this.state.page}</Text>*/
         return (
-            <View style={style.container}>
+            <View style={style.container} {...this._panResponder.panHandlers}>
                 <View style={style.locationBar}>
                     <LocationBar />
                 </View>
-                <ScrollView ref={(ref) => this._scrollView = ref} scrollEnabled={Platform.OS==='ios'} showsVerticalScrollIndicator={false}
+                <ScrollView ref={(ref) => this._scrollView = ref} scrollEnabled={(Platform.OS === 'ios')} showsVerticalScrollIndicator={false}
                             onScroll={(evt) => this.handleScroll(evt)} scrollEventThrottle={200} pagingEnabled={true}
                             refreshControl={
                               <RefreshControl
@@ -121,18 +121,16 @@ export default class Main extends Component {
                               />
                             }
                 >
-                    <View style={{flex: 1}} {...this._panResponder.panHandlers}>
-                        <View style={style.frontpage}>
-                            <MainPage
-                                radius1={this.state.radius1}
-                                radius2={this.state.radius2}
-                                radius3={this.state.radius3}
-                                radius4={this.state.radius4}
-                            />
-                        </View>
-                        <View style={style.underpage}>
-                            <DetailPage />
-                        </View>
+                    <View style={style.frontpage}>
+                        <MainPage
+                            radius1={this.state.radius1}
+                            radius2={this.state.radius2}
+                            radius3={this.state.radius3}
+                            radius4={this.state.radius4}
+                        />
+                    </View>
+                    <View style={style.underpage}>
+                        <DetailPage />
                     </View>
                 </ScrollView>
             </View>
@@ -140,53 +138,58 @@ export default class Main extends Component {
     }
 
     _panResponder = (Platform.OS === 'android')? PanResponder.create({
-        // Ask to be the responder:
-        onStartShouldSetPanResponder: (evt, gestureState) => true,
-        onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
-        onMoveShouldSetPanResponder: (evt, gestureState) => true,
-        onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
-        onPanResponderGrant: (evt, gestureState) => {
-            // this.scrollPosY = evt.nativeEvent.pageY;
+            // Ask to be the responder:
+            onStartShouldSetPanResponder: (evt, gestureState) => false,
+            onStartShouldSetPanResponderCapture: (evt, gestureState) => false,
+            onMoveShouldSetPanResponder: (evt, gestureState) => false,
+            onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+            onPanResponderGrant: (evt, gestureState) => {
+                this.scrollPosY = evt.nativeEvent.pageY;
 
-        },
-        onPanResponderMove: (evt, gestureState) => {
-            // let scrollPosY = evt.nativeEvent.pageY - this.scrollPosY;
-        },
-        onPanResponderTerminationRequest: (evt, gestureState) => {
-            console.log('cancel');
-            return true;
-        },
-        onPanResponderRelease: (evt, gestureState) => {
-            let locationY = gestureState.dy;
-            let threshold = (height - statusBarHeight - locationBarHeight) / 10;
-            console.log('release');
+            },
+            onPanResponderMove: (evt, gestureState) => {
+                let scrollPosY = evt.nativeEvent.pageY - this.scrollPosY;
+            },
+            onPanResponderTerminationRequest: (evt, gestureState) => {
+                console.log('cancel');
+                return true;
+            },
+            onPanResponderRelease: (evt, gestureState) => {
+                let locationY = gestureState.dy;
+                let threshold = (height - statusBarHeight - locationBarHeight) / 10;
+                console.log('release');
 
-            if(locationY > 0){ // up scroll
-                // console.log('up Scroll');
-                if(locationY > threshold) {
-                    console.log('upper scroll');
-                    this._setPrevPage();
-                }else{
-                    // this._setNextPage();
+                // console.log(locationY)
+
+                // console.log('threshold: ', threshold);
+                // console.log('locationY: ', locationY);
+
+                if(locationY > 0){ // up scroll
+                    // console.log('up Scroll');
+                    if(locationY > threshold) {
+                        console.log('upper scroll');
+                        this._setPrevPage();
+                    }else{
+                        // this._setNextPage();
+                    }
+                }else { // down scroll
+                    // console.log('down Scroll');
+                    if(locationY < threshold * -1) {
+                        console.log('Down scroll');
+                        this._setNextPage();
+                    } else{
+                        // this._setPrevPage();
+                    }
                 }
-            }else { // down scroll
-                // console.log('down Scroll');
-                if(locationY < threshold * -1) {
-                    console.log('Down scroll');
-                    this._setNextPage();
-                } else{
-                    // this._setPrevPage();
-                }
-            }
 
-        },
-        onPanResponderTerminate: (evt, gestureState) => {
+            },
+            onPanResponderTerminate: (evt, gestureState) => {
 
-        },
-        onShouldBlockNativeResponder: (evt, gestureState) => {
-            return true;
-        },
-    }) : [];
+            },
+            onShouldBlockNativeResponder: (evt, gestureState) => {
+                return false;
+            },
+        }) : [];
 
     _setNextPage() {
         this._scrollView.scrollTo({x: 0, y: height - statusBarHeight - locationBarHeight, animated: true});

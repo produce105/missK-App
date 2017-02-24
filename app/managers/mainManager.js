@@ -19,8 +19,16 @@ export default class MainManager {
         return this.sample1;
     }
 
-    static async getDustData() {
-        let resJson = await RequestService.get(CONFIG.API_SERVER_BASE_URL + 'dust');
+    static async getDustData(lat, long) {
+        let qs = {
+                date: '2017-02-20',
+                hour: '17',
+                lat: lat,
+                long: long
+        };
+
+
+        let resJson = await RequestService.get(CONFIG.API_SERVER_BASE_URL + '/totalinfo', qs);
         return resJson;
     }
 

@@ -58,7 +58,7 @@ export default class DetailPage extends Component {
                         <View style={style.divider}/>
                         <View style={style.predictionContainer}>
                             <Text style={{textAlign: 'center'}}>모레</Text>
-                            <Image style={style.weatherIcon}source={require('./../../../assets/images/icons/icon_face_delay.png')}/>
+                            <Image style={style.weatherIcon}source={require('./../../../assets/images/icons/icon_face_delay@2x.png')}/>
                             <Text style={{textAlign: 'center'}}>발표예정</Text>
                         </View>
                     </View>
@@ -72,7 +72,7 @@ export default class DetailPage extends Component {
                                 <TouchableWithoutFeedback onPress={() => {
                                     this.showAlert();
                                 }}>
-                                    <Image style={{marginLeft:10}} source={require('./../../../assets/images/icons/icon_info.png')}/>
+                                    <Image style={{marginLeft:10}} source={require('./../../../assets/images/icons/icon_info@2x.png')}/>
                                 </TouchableWithoutFeedback>
                             </View>
                             <View style={style.unitContainer}>
@@ -87,16 +87,16 @@ export default class DetailPage extends Component {
                     <View style={[style.row, {marginLeft: 20, marginRight: 20}]}/>
                     <View style={style.belowSection}>
                         <View style={[style.descriptionTitle, {marginLeft: 20}]}>
-                            <View style={{flex: 0.5, marginTop: 20}}>
-                                <Text style={{fontSize: 13}}>미세먼지</Text>
+                            <View style={{flex: 0.5, marginTop: 25}}>
+                                <Text style={{fontSize: 12}}>미세먼지</Text>
                             </View>
-                            <View style={{flex: 0.5}}>
-                                <Text style={{fontSize: 13}}>초미세먼지</Text>
+                            <View style={{flex: 0.5, marginBottom: 20}}>
+                                <Text style={{fontSize: 12}}>초미세먼지</Text>
                             </View>
                         </View>
                         <View style={style.description}>
-                            <Text style={[style.descriptionText, {marginTop: 20}]}>지름이 10µm(마이크로미터, 1µm = 1000분의 1mm) 이하의 먼지로 PM(Particulate Matter)10이라고 합니다.</Text>
-                            <Text style={style.descriptionText}>입자의 크기가 더 작은 미세먼지를 초미세먼지라 부르며 지름 2.5µm 이하의 먼지로서 PM2.5이라고 합니다.</Text>
+                            <Text style={[style.descriptionText, {marginTop: 25}]}>지름이 10µm(마이크로미터, 1µm = 1000분의 1mm) 이하의 먼지로 PM(Particulate Matter)10이라고 합니다.</Text>
+                            <Text style={[style.descriptionText, {marginBottom: 20}]}>입자의 크기가 더 작은 미세먼지를 초미세먼지라 부르며 지름 2.5µm 이하의 먼지로서 PM2.5이라고 합니다.</Text>
                         </View>
                     </View>
               </View>

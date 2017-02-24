@@ -7,19 +7,20 @@
 /** External dependencies **/
 import React, { Component } from 'react';
 import {Text, View, Navigator, Image} from 'react-native';
+var moment = require('moment');
+
 
 /** Internal dependencies **/
 import {width} from './../../common/styles/common';
 import style from './locationBar.style';
 
 export default class LocationBar extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
-            curTime :  new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true}),
-            month: new Date().getMonth()+1,
-            date: new Date().getDate()
+            curTime :  moment().format('HH:mm a'),
+            month: moment().get('month')+1,
+            date: moment().get('date')
         }
     }
 
@@ -29,10 +30,11 @@ export default class LocationBar extends Component {
 
     componentDidMount() {
         setInterval( () => {
+            let today = moment();
           this.setState({
-            curTime : new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true}),
-              month: new Date().getMonth()+1,
-              date: new Date().getDate()
+            curTime : today.format('HH:mm a'),
+              month: moment().get('month')+1,
+              date: moment().get('date')
           })
         },1000)
 

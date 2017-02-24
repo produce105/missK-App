@@ -41,7 +41,7 @@ export default class DynamicBarGraph extends Component {
 
     render() {
         return (
-            <View style={style.container}>
+            <View style={[style.container, this.props.style]}>
               <View style={style.titlestyle}>
                 <Text style={style.maintitle}>{this.props.mainTitle}</Text>
                 <Text style={style.subtitle}>{this.props.subTitle}</Text>

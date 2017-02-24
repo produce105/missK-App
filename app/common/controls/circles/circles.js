@@ -55,7 +55,7 @@ export default class Circles extends Component {
         this.circleText4 = '매우 나쁨';
     }
     componentDidMount() {
-        console.log(this.props.radius3);
+
     }
 
     render() {

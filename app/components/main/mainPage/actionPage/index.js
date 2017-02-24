@@ -17,10 +17,7 @@ export default class ActionPage extends Component {
         super(props);
         this.state = {
 
-        }
-
-
-        console.log(this.props);
+        };
 
     }
     componentWillMount() {
@@ -71,7 +68,7 @@ export default class ActionPage extends Component {
                 break;
             case 'water':
                 description1 = '물을 마셔 몸 속 노폐물';
-                description2 = '배출을 원활하게 도와줘!';
+                description2 = '배출을 원활하게 도와줘요!';
                 break;
         }
 
