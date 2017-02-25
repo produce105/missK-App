@@ -19,11 +19,15 @@ export const Colors = {
     mainYellow: 'rgb(255, 201, 0)',
     mainRed: 'rgb(230, 68, 43)',
     mainGray: 'rgb(170, 170, 170)',
+    subGray: 'rgba(144, 144, 144, 0.2)',
     mainWhite: 'rgb(255, 255, 255)',
-    backGray: 'rgb(246, 246, 246)'
+    backGray: 'rgb(246, 246, 246)',
+
 }
 
 export const FontWeights = {
+    ultraThin: '100',
+    thin: '200',
     light: '300',
     regular: '400',
     medium: '500',

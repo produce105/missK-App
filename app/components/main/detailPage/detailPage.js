@@ -38,6 +38,20 @@ export default class DetailPage extends Component {
         )
     }
 
+    _getInfoSource(info) {
+        if(info === '보통') {
+            return require('./../../../assets/images/icons/icon_face_normal.png');
+        } else if (info === '좋음') {
+            return require('./../../../assets/images/icons/icon_face_good.png');
+        } else if (info === '나쁨') { // 나쁨??
+            return require('./../../../assets/images/icons/icon_face_bad.png');
+        } else if (info === '매우나쁨') {
+            return require('./../../../assets/images/icons/icon_face_bad.png');
+        } else { // 예보없음
+            return require('./../../../assets/images/icons/icon_face_delay.png');
+        }
+    }
+
     render() {
         return (
             <View style={style.container}>
@@ -46,20 +60,20 @@ export default class DetailPage extends Component {
                     <View style={style.predictionSection}>
                         <View style={style.predictionContainer}>
                             <Text style={{textAlign: 'center'}}>오늘</Text>
-                            <Image style={style.weatherIcon}source={require('./../../../assets/images/icons/icon_face_good.png')}/>
-                            <Text style={{textAlign: 'center'}}>좋음</Text>
+                            <Image style={style.weatherIcon} source={this._getInfoSource(this.props.todayInfo)}/>
+                            <Text style={{textAlign: 'center'}}>{this.props.todayInfo}</Text>
                         </View>
                         <View style={style.divider}/>
                         <View style={style.predictionContainer}>
                             <Text style={{textAlign: 'center'}}>내일</Text>
-                            <Image style={style.weatherIcon}source={require('./../../../assets/images/icons/icon_face_normal.png')}/>
-                            <Text style={{textAlign: 'center'}}>보통</Text>
+                            <Image style={style.weatherIcon} source={this._getInfoSource(this.props.tomorrowInfo)}/>
+                            <Text style={{textAlign: 'center'}}>{this.props.tomorrowInfo}</Text>
                         </View>
                         <View style={style.divider}/>
                         <View style={style.predictionContainer}>
                             <Text style={{textAlign: 'center'}}>모레</Text>
-                            <Image style={style.weatherIcon}source={require('./../../../assets/images/icons/icon_face_delay@2x.png')}/>
-                            <Text style={{textAlign: 'center'}}>발표예정</Text>
+                            <Image style={style.weatherIcon} source={this._getInfoSource(this.props.afterTomorrowInfo)}/>
+                            <Text style={{textAlign: 'center'}}>{this.props.afterTomorrowInfo}</Text>
                         </View>
                     </View>
                 </View>
@@ -72,7 +86,9 @@ export default class DetailPage extends Component {
                                 <TouchableWithoutFeedback onPress={() => {
                                     this.showAlert();
                                 }}>
-                                    <Image style={{marginLeft:10}} source={require('./../../../assets/images/icons/icon_info@2x.png')}/>
+                                    <View style={{flex: 1, height: 20, justifyContent: 'center'}}>
+                                        <Image style={{marginLeft:10}} source={require('./../../../assets/images/icons/icon_info@2x.png')}/>
+                                    </View>
                                 </TouchableWithoutFeedback>
                             </View>
                             <View style={style.unitContainer}>

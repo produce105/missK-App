@@ -49,22 +49,27 @@ export default class Circles extends Component {
         };
     }
     componentWillMount() {
-        this.circleText1 = '매우 좋음';
-        this.circleText2 = '좋음';
-        this.circleText3 = '나쁨';
-        this.circleText4 = '매우 나쁨';
-    }
-    componentDidMount() {
 
+    }
+
+    componentDidMount() { // this.props.index
+        this._getTitle(this);
+    }
+
+    _getTitle() {
+            this.circleText1 = '매우좋음'; // '매우좋음';
+            this.circleText2 = '좋음'; // '좋음';
+            this.circleText3 = '나쁨'; // '나쁨';
+            this.circleText4 = '매우나쁨'; // '매우나쁨';
     }
 
     render() {
         return (
             <View style={style.container}>
-                <AnimatedCircle color={Colors.mainBlue} text={this.circleText1} radius={this.props.radius1}/>
-                <AnimatedCircle color={Colors.mainSky} text={this.circleText2} radius={this.props.radius2}/>
-                <AnimatedCircle color={Colors.mainYellow} text={this.circleText3} radius={this.props.radius3}/>
-                <AnimatedCircle color={Colors.mainRed} text={this.circleText4} radius={this.props.radius4}/>
+                <AnimatedCircle color={Colors.mainBlue} text={(this.props.circleIndex === 1)? this.circleText1 : ''} radius={this.props.radius1}/>
+                <AnimatedCircle color={Colors.mainSky} text={(this.props.circleIndex === 2)? this.circleText2 : ''} radius={this.props.radius2}/>
+                <AnimatedCircle color={Colors.mainYellow} text={(this.props.circleIndex === 3)? this.circleText3 : ''} radius={this.props.radius3}/>
+                <AnimatedCircle color={Colors.mainRed} text={(this.props.circleIndex === 4)? this.circleText4 : ''} radius={this.props.radius4}/>
             </View>
         )
     }

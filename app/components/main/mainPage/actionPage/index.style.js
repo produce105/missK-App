@@ -20,27 +20,42 @@ const {width, height, scale} = Dimensions.get('window'),
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: Colors.mainYellow,
         flexDirection: 'row',
         flex: 1,
     },
     imageContainer: {
         flex: 0.4,
+        // marginTop: 25,
         justifyContent: 'center',
         alignItems: 'center'
     },
     descriptionContainer: {
         flex: 0.6,
+        // marginTop: 25,
         justifyContent: 'center',
         // alignItems: 'center'
     },
     title: {
         fontWeight: FontWeights.bold,
         color: Colors.mainWhite,
-        fontSize: 15,
+        fontSize: 16,
     },
     description: {
-        color: Colors.mainWhite
-    }
+        color: Colors.mainWhite,
+        fontWeight: "100",
+        fontSize: 14
+    },
+    mainBlue: {
+        backgroundColor: Colors.mainBlue
+    },
+    mainSky: {
+        backgroundColor: Colors.mainSky
+    },
+    mainYellow: {
+        backgroundColor: Colors.mainYellow
+    },
+    mainRed: {
+        backgroundColor: Colors.mainRed
+    },
 });
 

@@ -25,5 +25,6 @@ export default StyleSheet.create({
         flexDirection: 'row',
         marginRight: 20,
         marginLeft: 20,
+        marginTop: 15
     },
 })

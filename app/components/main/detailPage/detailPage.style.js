@@ -69,7 +69,7 @@ export default StyleSheet.create({
     },
     divider: {
         width: 1,
-        backgroundColor: Colors.mainGray,
+        backgroundColor: Colors.subGray,
         marginTop: 30,
         marginBottom: 30,
         // flex: 0.5
@@ -101,7 +101,8 @@ export default StyleSheet.create({
     standardContainer: {
         flex: 0.5,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     belowSection: {
         flex: 0.5,

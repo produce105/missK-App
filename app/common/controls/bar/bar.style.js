@@ -24,9 +24,10 @@ export default StyleSheet.create({
         flex: 1,
     },
     barMargrin: {
-        marginLeft: 3,
-        marginRight: 3,
-        height: 5,
+        marginTop: 3,
+        marginLeft: 2,
+        marginRight: 2,
+        height: 2,
     },
     grayBack: {
         backgroundColor: Colors.backGray

@@ -5,9 +5,14 @@
  * @author hogyun
  */
 
+/** External dependencies **/
+var moment = require('moment');
+
+/** Internal dependencies **/
 import MainDTO from '../DTOs/MainDTO'
 import RequestService from './../services/requestService'
 import CONFIG from './../config'
+
 
 export default class MainManager {
 
@@ -21,14 +26,16 @@ export default class MainManager {
 
     static async getDustData(lat, long) {
         let qs = {
-                date: '2017-02-20',
-                hour: '17',
+                date: moment().format('YYYY-MM-DD'), //오늘 date
+                hour: new Date().getHours(), //오늘 hour
                 lat: lat,
                 long: long
         };
 
+        console.log(qs);
 
-        let resJson = await RequestService.get(CONFIG.API_SERVER_BASE_URL + '/totalinfo', qs);
+
+        let resJson = await RequestService.get(CONFIG.AWS_SERVER_BASE_URL + '/totalinfo', qs);
         return resJson;
     }
 

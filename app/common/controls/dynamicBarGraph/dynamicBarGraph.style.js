@@ -41,7 +41,7 @@ export default StyleSheet.create({
     maintitle: {
       textAlignVertical: 'bottom',
       textAlign: 'left',
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: 'bold',
       marginRight: 3,
       marginLeft: 3,
@@ -49,7 +49,7 @@ export default StyleSheet.create({
     subtitle: {
       textAlignVertical: 'bottom',
       textAlign: 'left',
-      fontSize: 10,
+      fontSize: 11,
       color: Colors.mainGray
     },
     unitContainer: {
@@ -58,7 +58,8 @@ export default StyleSheet.create({
         marginRight: 5
     },
     unitText: {
-        fontSize: 10,
-        color: Colors.mainGray
+        fontSize: 11,
+        color: Colors.mainGray,
+        marginBottom: 2
     }
 })

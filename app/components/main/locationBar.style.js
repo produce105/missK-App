@@ -27,9 +27,9 @@ export default StyleSheet.create({
     },
     locationBar:{
         flex: 1,
-        margin: 20,
+        marginLeft: 20
     },
     weather: {
-        margin: 20,
+        marginRight: 20
     },
 });

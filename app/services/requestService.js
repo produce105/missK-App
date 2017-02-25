@@ -18,6 +18,7 @@ export default class RequestService {
             };
 
             let response = await fetch(url, Options);
+            console.log(response);
             let responseJson = await response.json();
             return responseJson;
         } catch(error) {

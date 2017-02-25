@@ -36,8 +36,14 @@ export default class Number extends Component {
     render() {
         return (
             <View style={style.container}>
-                <Text>{(parseInt(this.props.number * this.props.animProgress))+''}</Text>
+                <Text style={this.props.style}>{this._getAnimatedValue()}</Text>
             </View>
         )
+    }
+
+    _getAnimatedValue() {
+        let val = parseInt(this.props.number * this.props.animProgress);
+        if (val == 0) return '' ;
+        return val;
     }
 }

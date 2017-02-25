@@ -25,12 +25,8 @@ export default StyleSheet.create({
         backgroundColor: 'white',
         flex: 1
     },
-    locinfobar:{
-      margin: 20,
-    },
     actionspace: {
-        height: height * 2 / 5,
-        backgroundColor: Colors.mainYellow,
+        height: height * 2 / 6,
     },
 
 });

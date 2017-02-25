@@ -20,6 +20,7 @@ export default class DynamicBarGraph extends Component {
         this.state = {
             size: 10
         }
+        this.divide = (this.props.micro)? 2 : 1;
     }
     componentWillMount() {
 
@@ -50,12 +51,34 @@ export default class DynamicBarGraph extends Component {
                   }
               </View>
               <View style={style.barstyle}>
-                  <Bar barcolor={Colors.mainBlue} />
-                  <Bar barcolor={Colors.mainSky} />
-                  <Bar barcolor={Colors.mainYellow} />
-                  <Bar barcolor={Colors.mainRed} />
+                  <Bar barcolor={Colors.mainBlue} dust={this._getThreshold('first')? this.props.dust : 0} animProgress={this.props.animProgress}/>
+                  <Bar barcolor={Colors.mainSky} dust={this._getThreshold('second')?  this.props.dust : 0} animProgress={this.props.animProgress}/>
+                  <Bar barcolor={Colors.mainYellow} dust={this._getThreshold('third')? this.props.dust : 0} animProgress={this.props.animProgress}/>
+                  <Bar barcolor={Colors.mainRed} dust={this._getThreshold('forth')? this.props.dust : 0} animProgress={this.props.animProgress}/>
               </View>
             </View>
         )
     }
+
+    _getThreshold(index) {
+        switch (index) {
+            case 'first': // 1차 범위에 포함
+                if(0 <= this.props.dust && this.props.dust < 50/this.divide ) return true;
+                else return false;
+                break;
+            case 'second':
+                if(50/this.divide <= this.props.dust && this.props.dust < 75/this.divide ) return true;
+                else return false;
+                break;
+            case 'third':
+                if(75/this.divide <= this.props.dust && this.props.dust < 100/this.divide ) return true;
+                else return false;
+                break;
+            case 'forth':
+                if(100/this.divide <= this.props.dust && this.props.dust < 150/this.divide ) return true;
+                else return false;
+                break;
+        }
+    }
+
 }

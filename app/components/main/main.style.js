@@ -20,6 +20,8 @@ const {width, height, scale} = Dimensions.get('window'),
 
 export const statusBarHeight = StatusBar.currentHeight || 0; // only android,
 export const locationBarHeight = 100 - statusBarHeight;
+export const locationBarMargin = 5;
+
 
 /** StyleSheet **/
 export default StyleSheet.create({
@@ -33,15 +35,23 @@ export default StyleSheet.create({
     },
 
     frontpage: {
-        height: height - locationBarHeight - statusBarHeight
+        marginTop: locationBarMargin,
+        height: height - locationBarHeight - statusBarHeight - locationBarMargin
     },
 
     underpage: {
-        height: height - locationBarHeight - statusBarHeight
+        height: height - locationBarHeight - statusBarHeight + locationBarMargin
     },
 
     infopage: {
 
+    },
+
+    centering: {
+        position: 'absolute',
+        top: height / 2 - 80,
+        left: width / 2 - 25,
+        padding: 8,
     },
 
 });

@@ -25,9 +25,9 @@ export default class MainPage extends Component {
         }
     }
     componentWillMount() {
+
     }
     componentDidMount() {
-
 
     }
 
@@ -40,15 +40,20 @@ export default class MainPage extends Component {
     render() {
         return (
             <View style={style.container}>
-              <Circles circle1={Colors.mainBlue} circle2={Colors.mainSky} circle3={Colors.mainYellow}
-                       circle4={Colors.mainRed} animProgress={this.props.animProgress}
-                       radius1={this.props.radius1} radius2={this.props.radius2} radius3={this.props.radius3} radius4={this.props.radius4}
-              />
-              <DynamicBarGraph mainTitle="미세먼지" subTitle="pm10" unit={true} style={{marginTop: 20}}/>
-              <DynamicBarGraph mainTitle="초 미세먼지" subTitle="pm2.5" style={{marginBottom: 20}}/>
+                <View style={{flex: 1}}>
+                  <Circles circle1={Colors.mainBlue} circle2={Colors.mainSky} circle3={Colors.mainYellow}
+                           circle4={Colors.mainRed} animProgress={this.props.animProgress}
+                           radius1={this.props.radius1} radius2={this.props.radius2} radius3={this.props.radius3} radius4={this.props.radius4}
+                           circleIndex={this.props.circleIndex}
+                  />
+                </View>
+                <View style={{flex: 1}}>
+              <DynamicBarGraph mainTitle="미세먼지" subTitle="pm10" unit={true} animProgress={this.props.animProgress} dust={this.props.dust}/>
+              <DynamicBarGraph mainTitle="초미세먼지" subTitle="pm2.5" style={{marginBottom: 20}} micro={true} animProgress={this.props.animProgress} dust={this.props.microDust}/>
+                </View>
               <View style={style.actionspace}>
-                  <ActionPage type={"water"}/>
-                  <ActionPage type={"fruit"}/>
+                  <ActionPage style={{paddingTop: 10}} circleIndex={this.props.circleIndex} first={true}/>
+                  <ActionPage style={{paddingBottom: 10}} circleIndex={this.props.circleIndex} />
               </View>
             </View>
         )

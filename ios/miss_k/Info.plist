@@ -26,6 +26,19 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>13.124.36.118
+13.124.36.118
+13.124.36.118</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>ec2-13-124-36-118.ap-northeast-2.compute.amazonaws.com
+http://ec2-13-124-36-118.ap-northeast-2.compute.amazonaws.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>localhost</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

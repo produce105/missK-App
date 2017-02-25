@@ -61,16 +61,16 @@ export default class NormalCircle extends Component {
         return (
             <View style={style.container}>
                 <Svg
-                    height={width/4 + 20}
+                    height={width/4 + 50}
                     width={width/4}
                 >
                     <Circle
                         cx={width/4/2}
-                        cy={width/16+20}
+                        cy={width/16+21.5}
                         r={this.props.radius}
                         fill={this.props.color}
                     />
-                    <Text x={width/8} y={width/8 + 40} fontSize={16} textAnchor='middle'>{this.props.text}</Text>
+                    <Text x={width/8} y={width/8 + 48.5} fontSize={22} textAnchor='middle' fill={this.props.color}>{this.props.text}</Text>
                 </Svg>
 
             </View>
