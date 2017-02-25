@@ -8,7 +8,7 @@
 
 /** External dependencies **/
 import React, { Component } from 'react';
-import {Text, View, ScrollView, Animated, Easing, InteractionManager, Platform, PanResponder, RefreshControl, PermissionsAndroid, ActivityIndicator} from 'react-native';
+import {Text, View, ScrollView, Animated, Easing, InteractionManager, Platform, PanResponder, RefreshControl, PermissionsAndroid, ActivityIndicator, BackAndroid, Alert} from 'react-native';
 
 /** Internal dependencies **/
 import Toolbar from '../../common/controls/toolbar/toolbar'
@@ -62,12 +62,27 @@ export default class Main extends Component {
                 this._getCurrentPos().then(() => {
                     //애니메이션
                     this._startAnimation(this._getDustThrotle());
+                }).catch((err) => {
+                    Alert.alert(
+                        'Alert',
+                        'GPS, 인터넷을 켜고 앱을 실행해 주세요',
+                        [
+                            {text: 'OK', onPress: () => BackAndroid.exitApp()},
+                        ],
+                        { cancelable: false }
+                    )
+                    setTimeout(() => {
+                        BackAndroid.exitApp();
+                    }, 3000);
+                    this.setState({isLoading: false});
+                    console.warn(err);
                 });
             } else {
                 alert('GPS 설정을 켜주세요.')
                 console.log('Location permission denied');
             }
         } catch (err) {
+            this.setState({isLoading: false});
             console.warn(err);
         }
 
@@ -127,7 +142,7 @@ export default class Main extends Component {
                     console.log('lat', lat);
                     console.log('long', long);
                 },
-                (error) => alert(JSON.stringify(error))
+                (error) => reject(error)
             );
         })
     }
