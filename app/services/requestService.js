@@ -9,14 +9,12 @@ export default class RequestService {
     constructor() {
 
     }
-    static async get(url, qs) {
+    static async get(url) {
         try {
             let Options = {
                 method: 'GET',
                 headers: new Headers(),
-                qs: qs
             };
-
             let response = await fetch(url, Options);
             console.log(response);
             let responseJson = await response.json();

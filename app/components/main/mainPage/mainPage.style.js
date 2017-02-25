@@ -22,11 +22,23 @@ const {width, height, scale} = Dimensions.get('window'),
 /** StyleSheet **/
 export default StyleSheet.create({
     container: {
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
         flex: 1
     },
     actionspace: {
         height: height * 2 / 6,
+    },
+    mainBlue: {
+        backgroundColor: Colors.mainBlue
+    },
+    mainSky: {
+        backgroundColor: Colors.mainSky
+    },
+    mainYellow: {
+        backgroundColor: Colors.mainYellow
+    },
+    mainRed: {
+        backgroundColor: Colors.mainRed
     },
 
 });

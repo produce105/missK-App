@@ -27,15 +27,13 @@ export default class MainManager {
     static async getDustData(lat, long) {
         let qs = {
                 date: moment().format('YYYY-MM-DD'), //오늘 date
-                hour: new Date().getHours(), //오늘 hour
-                lat: lat,
-                long: long
+                hour: new Date().getHours()+'', //오늘 hour
+                lat: lat+'',
+                long: long+''
         };
-
         console.log(qs);
 
-
-        let resJson = await RequestService.get(CONFIG.AWS_SERVER_BASE_URL + '/totalinfo', qs);
+        let resJson = await RequestService.get(CONFIG.AWS_SERVER_BASE_URL + '/totalinfo' + `?date=${qs.date}&hour=${qs.hour}&lat=${qs.lat}&long=${qs.long}`);
         return resJson;
     }
 

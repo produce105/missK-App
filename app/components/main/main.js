@@ -127,8 +127,7 @@ export default class Main extends Component {
                     console.log('lat', lat);
                     console.log('long', long);
                 },
-                (error) => alert(JSON.stringify(error)),
-                {enableHighAccuracy: false, timeout: 20000, maximumAge: 1000}
+                (error) => alert(JSON.stringify(error))
             );
         })
     }
@@ -234,7 +233,7 @@ export default class Main extends Component {
             case '경기도':
                 return '경기';
                 break;
-            case '인천시':
+            case '인천광역시':
                 return '인천';
                 break;
         }

@@ -36,6 +36,21 @@ export default class MainPage extends Component {
         console.log(this.dust);
     }
 
+    _getBackgroundColor() {
+        if(this.props.circleIndex === 1) {
+            return style.mainBlue
+        }
+        if(this.props.circleIndex === 2) {
+            return style.mainSky
+        }
+        if(this.props.circleIndex === 3) {
+            return style.mainYellow
+        }
+        if(this.props.circleIndex === 4) {
+            return style.mainRed
+        }
+    }
+
 
     render() {
         return (
@@ -51,7 +66,7 @@ export default class MainPage extends Component {
               <DynamicBarGraph mainTitle="미세먼지" subTitle="pm10" unit={true} animProgress={this.props.animProgress} dust={this.props.dust}/>
               <DynamicBarGraph mainTitle="초미세먼지" subTitle="pm2.5" style={{marginBottom: 20}} micro={true} animProgress={this.props.animProgress} dust={this.props.microDust}/>
                 </View>
-              <View style={style.actionspace}>
+              <View style={[style.actionspace, this._getBackgroundColor()]}>
                   <ActionPage style={{paddingTop: 10}} circleIndex={this.props.circleIndex} first={true}/>
                   <ActionPage style={{paddingBottom: 10}} circleIndex={this.props.circleIndex} />
               </View>
