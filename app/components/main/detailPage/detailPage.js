@@ -30,7 +30,7 @@ export default class DetailPage extends Component {
     showAlert() {
         Alert.alert(
             '범위 및 기준',
-            '미세뭔지는 한국환경공단(에어코리아)에서 제공하는 24시간 기준의 가이드라인을 따르고 있습니다.',
+            '미세몬은 한국환경공단(에어코리아)에서 제공하는 24시간 기준의 가이드라인을 따르고 있습니다.',
             [
                 {text: 'OK', onPress: () => console.log('OK Pressed')},
             ],

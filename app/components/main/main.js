@@ -9,6 +9,8 @@
 /** External dependencies **/
 import React, { Component } from 'react';
 import {Text, View, ScrollView, Animated, Easing, InteractionManager, Platform, PanResponder, RefreshControl, PermissionsAndroid, ActivityIndicator, BackAndroid, Alert} from 'react-native';
+import SplashScreen from 'react-native-splash-screen'
+
 
 /** Internal dependencies **/
 import Toolbar from '../../common/controls/toolbar/toolbar'
@@ -295,6 +297,8 @@ export default class Main extends Component {
 
     componentDidMount() {
         this.requestLocationPermission();
+        SplashScreen.hide();
+
         /*
         InteractionManager.runAfterInteractions(()=>{
             this._scrollView.scrollTo({y: 600});

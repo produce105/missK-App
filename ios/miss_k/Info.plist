@@ -46,8 +46,6 @@ http://ec2-13-124-36-118.ap-northeast-2.compute.amazonaws.com</key>
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Location Info Needded</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location Information needed</string>
 	<key>UILaunchStoryboardName</key>
